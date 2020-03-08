@@ -15,11 +15,9 @@ describe('user views menus', () => {
 		})
 
 		it('successfully', () => {
-			cy.get('#index').within(() => {
-				cy.contains('Spaghetti and Meatballs')
-				cy.contains('Salad')
-				cy.contains('Ice Cream')
-			})
+			cy.get("#starter-index").should('contain', 'Salad')
+      cy.get("#entree-index").should('contain',"Spaghetti and Meatballs" )
+      cy.get("#dessert-index").should('contain',"Ice Cream" )
 		})
 	});
 
@@ -35,7 +33,9 @@ describe('user views menus', () => {
 		})
 
 		it('unsuccessfully', () => {
-			cy.get('#index').should('not.exist')
+      cy.get('#starterIndex').should('not.exist')
+      cy.get('#entreeIndex').should('not.exist')
+      cy.get('#dessertIndex').should('not.exist')
 		})
 	});
 })
