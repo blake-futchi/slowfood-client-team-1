@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { getData } from "../modules/productData";
 import axios from "axios";
 import { authenticate } from "../modules/authenticate";
+import { ScaleLoader } from "react-spinners";
+import { Page, Toolbar, Button } from 'react-onsenui';
 
 class DisplayMenuAndOrder extends Component {
   state = {
@@ -41,7 +43,7 @@ class DisplayMenuAndOrder extends Component {
 
   finalizeOrder() {
     this.setState({
-      message: { id: 0, message: "Your order will be ready in 30 minutes!" }
+      message: { id: 0, message: "Your order will be ready in 30 minutes!"  }
     });
   }
 
@@ -137,7 +139,11 @@ class DisplayMenuAndOrder extends Component {
     return (
       <>
         {this.state.message.id === 0 && (
-          <h2 className="message">{this.state.message.message}</h2>
+          <div>
+            <h2 className="message">{this.state.message.message}</h2>
+            <ScaleLoader color="#36D7B7"/>
+          </div>
+          
         )}
         {this.state.orderDetails.hasOwnProperty("products") && (
           <button

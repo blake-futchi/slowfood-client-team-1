@@ -1,0 +1,29 @@
+#render-signup {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+#render-login {
+  margin-top: 2rem;
+  text-align: center;
+
+}
+
+#render-signup:hover { 
+  transform: translateY(.3rem); 
+  color: #da3e44;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#render-login:hover { 
+  transform: translateY(.3rem); 
+  color: #da3e44;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
