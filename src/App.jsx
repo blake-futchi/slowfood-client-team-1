@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DisplayProductData from "./components/DisplayProductData";
+import DisplayMenuAndOrder from "./components/DisplayMenuAndOrder";
 import LoginForm from "./components/LoginForm";
 import { authenticate, register } from "./modules/authenticate";
 import RegistrationForm from "./components/RegistrationForm";
@@ -93,7 +93,7 @@ class App extends Component {
         {renderRegister}
         {renderResponse}
         {renderSignIn}
-        <DisplayProductData />
+        {this.state.authenticated === true && <DisplayMenuAndOrder />}
       </>
     );
   }

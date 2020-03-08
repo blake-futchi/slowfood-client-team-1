@@ -1,0 +1,15 @@
+{
+  "message": "This item has been added to your order.",
+  "order": {
+    "id": 1,
+    "products": [
+      {
+        "amount": 1,
+        "name": "Salad",
+        "price": 4.0,
+        "category": "starter"
+      }
+    ],
+    "order_total": 4.0
+  }
+}
